@@ -5,7 +5,7 @@ const app = express();
 async function fetchXNXXURL(urlXNXX) {
     const apiUrl = `https://tools.betabotz.eu.org/tools/xnxxdl?url=${encodeURIComponent(urlXNXX)}`;
 
-    try {
+    try { 
         const response = await axios.get(apiUrl);
         const { result } = response.data;
         if (result && result.url) {
